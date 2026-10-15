@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sumaiya Sani | Software Developer</title>
+<meta name="description" content="Software developer building mobile apps, web platforms and e-commerce systems, with a focus on generative AI and automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF1F7;--ink:#14172B;--mute:#4B5170;--line:#C9CFE3;--acc:#3D3BF3;--acc2:#0E7C70;--sf:#E2E7F3;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0E1020;--ink:#E8EAF6;--mute:#A3A9C9;--line:#2B3050;--acc:#9594FF;--acc2:#4FD1BF;--sf:#171A33;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0E1020;--ink:#E8EAF6;--mute:#A3A9C9;--line:#2B3050;--acc:#9594FF;--acc2:#4FD1BF;--sf:#171A33;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 "IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc2);outline-offset:3px;border-radius:4px}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+nav{display:flex;gap:20px;font-size:15px;overflow-x:auto}
+nav a{color:var(--mute);text-decoration:none;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+.tools{display:flex;gap:8px}
+button{font:600 14px "IBM Plex Sans Arabic",sans-serif;background:var(--sf);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+button:hover{border-color:var(--acc)}
+.hero{padding:88px 0 56px}
+.hero h1{font-size:clamp(52px,12vw,112px);line-height:1;font-weight:700;margin:0 0 8px;letter-spacing:-.03em}
+html[lang=ar] .hero h1{letter-spacing:0;line-height:1.25}
+.hero .role{font-size:clamp(20px,3vw,26px);font-weight:600;color:var(--acc);margin:0 0 20px}
+.hero p{max-width:60ch;color:var(--mute);margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.cta a{padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;border:1px solid var(--acc)}
+.cta a.p{background:var(--acc);color:var(--bg)}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:28px;margin:0 0 24px;font-weight:700}
+.row{display:grid;grid-template-columns:200px 1fr;gap:8px 32px;padding:16px 0}
+.row+.row{border-top:1px dashed var(--line)}
+.row h3{margin:0;font-size:17px;font-weight:600}
+.row small{display:block;color:var(--mute);font-size:14px}
+.row p{margin:0;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.chips li{padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--sf);font-size:15px}
+.chips li.m{border-color:var(--acc2)}
+.proj a.t{font-weight:600;font-size:18px}
+.tag{display:inline-block;font-size:13px;color:var(--acc2);border:1px solid var(--acc2);border-radius:6px;padding:0 8px;margin-inline-start:8px}
+footer{padding:32px 0 56px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:640px){.row{grid-template-columns:1fr}.hero{padding-top:56px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<nav aria-label="Sections">
+<a href="#about" data-ar="نبذة">About</a>
+<a href="#experience" data-ar="الخبرة">Experience</a>
+<a href="#skills" data-ar="المهارات">Skills</a>
+<a href="#projects" data-ar="المشاريع">Projects</a>
+<a href="#contact" data-ar="تواصل">Contact</a>
+</nav>
+<div class="tools">
+<button id="theme" type="button" aria-label="Toggle theme" data-ar-label="تبديل المظهر">◐</button>
+<button id="lang" type="button" aria-label="Switch language">العربية</button>
+</div>
+</div>
+</header>
+
+<main class="wrap">
+<div class="hero" id="about">
+<h1 data-ar="سمية ثاني">Sumaiya Sani</h1>
+<p class="role" data-ar="مطورة برمجيات">Software developer</p>
+<p data-ar="أبني تطبيقات الجوال ومنصات الويب وأنظمة التجارة الإلكترونية، ومهتمة بتوظيف الذكاء الاصطناعي التوليدي في قرارات الأعمال وتطوير المنتجات الرقمية.">I build mobile apps, web platforms and e-commerce systems, and I'm interested in how generative AI can improve business decisions and digital product development.</p>
+<div class="cta">
+<a class="p" href="#projects" data-ar="شاهد مشاريعي">See my projects</a>
+<a href="https://github.com/sumaiya-thani" data-ar="حسابي على GitHub">GitHub profile</a>
+</div>
+</div>
+
+<section id="experience">
+<h2 data-ar="الخبرة والتعليم">Experience and education</h2>
+<div class="row"><div><h3>Apple Developer Academy | Tuwaiq</h3></div><p data-ar="شاركت لمدة عامين، واختيرت ضمن أفضل 30 مشاركًا من أصل نحو 200 للاستمرار في العام الثاني.">Two years in the program. Selected among the top 30 of about 200 participants to continue into the second year.</p></div>
+<div class="row"><div><h3>Thmanyah</h3><small data-ar="متدربة مهندسة برمجيات">Software engineering intern</small></div><p data-ar="عملت على بحث واكتشاف البودكاست.">Worked on podcast search and discovery.</p></div>
+<div class="row"><div><h3 data-ar="وزارة الاقتصاد والتخطيط">Ministry of Economy and Planning</h3></div><p data-ar="طورت تطبيق Flutter لتوصيل وبيع المياه.">Built a Flutter app for water delivery and sales.</p></div>
+<div class="row"><div><h3>Awa Consulting</h3></div><p data-ar="عملت على أنظمة سرد القصص بالذكاء الاصطناعي وتطوير الويب.">Worked on AI storytelling systems and web development.</p></div>
+<div class="row"><div><h3 data-ar="مطورة Full-Stack ومحللة أنظمة تجارة إلكترونية">Full-stack developer and e-commerce systems analyst</h3></div><p data-ar="عملت على منصتي سلة وزد، وأتمتة العمليات، وربط أنظمة ERP.">Worked with Salla and Zid, process automation, and ERP integration.</p></div>
+<div class="row"><div><h3 data-ar="التعليم">Education</h3></div><p data-ar="بكالوريوس في Learning Innovation and Information Technology من Rajamangala University of Technology Thanyaburi في تايلاند، بمنحة دراسية.">Bachelor's in Learning Innovation and Information Technology, Rajamangala University of Technology Thanyaburi, Thailand (full scholarship).</p></div>
+</section>
+
+<section id="skills">
+<h2 data-ar="المهارات">Skills</h2>
+<ul class="chips">
+<li>Swift</li><li>SwiftUI</li><li>Flutter</li><li>Dart</li>
+<li data-ar="تطوير ويب Full-Stack">Full-stack web</li>
+<li>Salla</li><li>Zid</li>
+<li data-ar="ربط أنظمة ERP">ERP integration</li>
+<li class="m" data-ar="ذكاء اصطناعي توليدي">Generative AI</li>
+<li class="m" data-ar="الأتمتة">Automation</li>
+</ul>
+</section>
+
+<section id="projects">
+<h2 data-ar="المشاريع">Projects</h2>
+<div class="row proj"><div><a class="t" href="https://github.com/sumaiya-thani/BrandI">BrandI</a><span class="tag">Swift</span></div><p data-ar="تطبيق SwiftUI يساعد صناع المحتوى على تنظيم وإدارة منشوراتهم على وسائل التواصل.">A SwiftUI app that helps content creators organize and manage their social media posts.</p></div>
+<div class="row proj"><div><a class="t" href="https://github.com/sumaiya-thani/Burger_restaurant_flutter">Burger Restaurant</a><span class="tag">Dart</span></div><p data-ar="تطبيق مطعم برجر مبني بـ Flutter.">A burger restaurant app built with Flutter.</p></div>
+<div class="row proj"><div><a class="t" href="https://github.com/sumaiya-thani/Wasilaah">Wasilaah</a><span class="tag">Swift</span></div><p data-ar="مشروع فريق بلغة Swift.">A team project written in Swift.</p></div>
+</section>
+
+<section id="contact">
+<h2 data-ar="تواصل معي">Get in touch</h2>
+<p data-ar="مفتوحة لفرص تطوير البرمجيات والذكاء الاصطناعي والمنتجات الرقمية. المملكة العربية السعودية." style="color:var(--mute);margin-top:0">Open to opportunities in software development, AI and digital products. Based in Saudi Arabia.</p>
+<div class="cta">
+<a class="p" href="https://www.linkedin.com/in/sumaiya-sani-4b4b60202/">LinkedIn</a>
+<a href="https://github.com/sumaiya-thani">GitHub</a>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> Sumaiya Sani</div></footer>
+
+<script>
+(function(){
+var root=document.documentElement,els=document.querySelectorAll('[data-ar]'),en=[];
+els.forEach(function(e,i){en[i]=e.textContent});
+var lb=document.getElementById('lang'),tb=document.getElementById('theme');
+function setLang(l){
+root.lang=l;root.dir=l==='ar'?'rtl':'ltr';
+els.forEach(function(e,i){e.textContent=l==='ar'?e.getAttribute('data-ar'):en[i]});
+lb.textContent=l==='ar'?'English':'العربية';
+tb.setAttribute('aria-label',l==='ar'?'تبديل المظهر':'Toggle theme');
+document.title=l==='ar'?'سمية ثاني | مطورة برمجيات':'Sumaiya Sani | Software Developer';
+try{localStorage.setItem('lang',l)}catch(e){}
+}
+lb.addEventListener('click',function(){setLang(root.lang==='ar'?'en':'ar')});
+tb.addEventListener('click',function(){
+var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+var t=dark?'light':'dark';root.dataset.theme=t;
+try{localStorage.setItem('theme',t)}catch(e){}
+});
+try{var t=localStorage.getItem('theme');if(t)root.dataset.theme=t;var l=localStorage.getItem('lang');if(l==='ar')setLang('ar')}catch(e){}
+document.getElementById('y').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
