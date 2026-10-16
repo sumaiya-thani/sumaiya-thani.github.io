@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{if(localStorage.getItem('lang')==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
+<title data-ar="RAG AI Assistant | سمية ثاني">RAG AI Assistant | Sumaiya Sani</title>
+<meta name="description" content="An AI document assistant that finds answers in your own files and shows where they came from.">
+<meta property="og:title" content="RAG AI Assistant | Sumaiya Sani">
+<meta property="og:description" content="An AI document assistant that finds answers in your own files and shows where they came from.">
+<meta property="og:image" content="images/rag-diagram.svg">
+<meta name="theme-color" content="#F1EFE9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main" data-ar="انتقل إلى المحتوى">Skip to content</a>
+<div id="cur" aria-hidden="true"></div>
+<img id="pv" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+<header class="hdr"><div class="wrap">
+<a class="logo" href="index.html" aria-label="Sumaiya Sani, home">Sumaiya<b>.</b></a>
+<nav class="nav" id="nav" aria-label="Main">
+<a href="index.html#work" data-ar="أعمالي">Work</a><a href="index.html#experiments" data-ar="تجارب">Experiments</a><a href="index.html#about" data-ar="نبذة">About</a><a href="index.html#contact" data-ar="تواصل">Contact</a>
+</nav>
+<div class="hr"><button class="lg" type="button" aria-label="Switch language">العربية</button><button class="mb" type="button" aria-expanded="false" aria-controls="nav">Menu</button></div>
+</div></header>
+
+<main id="main"><div class="wrap">
+<div class="ph1">
+<a class="bk" href="index.html#projects" data-ar="→ كل المشاريع">&larr; All projects</a>
+<h1 class="d">RAG AI Assistant</h1>
+<p class="one" data-ar="مساعد ذكاء اصطناعي للمستندات يجد الإجابات في ملفاتك ويُظهر مصدرها.">An AI document assistant that finds answers in your own files and shows where they came from.</p>
+<dl class="meta"><div><dt data-ar="دوري">My role</dt><dd data-ar="صممت خط المعالجة كاملًا وأطلقته">Designed and shipped the full pipeline</dd></div><div><dt data-ar="الأدوات">Tools</dt><dd>n8n, Ollama, Supabase pgvector, Docker</dd></div><div><dt data-ar="النماذج">Models</dt><dd>Llama 3.2, nomic-embed-text</dd></div></dl>
+<div class="hi "><img src="images/rag-diagram.svg" alt="Diagram of the RAG pipeline: ingest documents, then ask questions"></div>
+</div>
+<div class="sc rv"><h2 class="d" data-ar="نظرة عامة">Overview</h2><div class="tx"><p data-ar="خط معالجة RAG (التوليد المعزز بالاسترجاع) كامل، من استيعاب المستندات إلى البحث الدلالي. تُلتقط المستندات في Google Drive تلقائيًا وتُجهَّز وتصبح قابلة للبحث. وتحصل الأسئلة على إجابات مبنية على هذه المستندات مع ذكر المصادر.">A complete Retrieval-Augmented Generation pipeline, from document ingestion to semantic search. Documents in Google Drive are picked up automatically, prepared and made searchable. Questions get answers grounded in those documents, with sources cited.</p></div></div>
+<div class="sc rv"><h2 class="d" data-ar="المشكلة والأهداف">Problem and objectives</h2><div class="tx"><p data-ar="الهدف: أن يسأل الناس مستنداتهم ويحصلوا على إجابات يمكنهم التحقق منها في المصدر.">The goal: let people ask questions of their own documents and get answers they can check against the source.</p><ul><li data-ar="استيعاب المستندات تلقائيًا بمراقبة Google Drive.">Ingest documents automatically by monitoring Google Drive.</li><li data-ar="إبقاء الاستدلال خاصًا بتشغيل النماذج محليًا.">Keep inference private by running models locally.</li><li data-ar="تقديم إجابات واعية بالسياق مع ذكر المصادر.">Return context-aware answers with source citations.</li><li data-ar="جعل النشر قابلًا للنقل ومستضافًا ذاتيًا، ليتوسع إلى قواعد معرفة المؤسسات ومساعدي الدعم.">Make deployment portable and self-hosted, so it can extend to enterprise knowledge bases and support assistants.</li></ul></div></div>
+<div class="sc rv"><h2 class="d" data-ar="دوري">My role</h2><div class="tx"><p data-ar="صممت خط المعالجة كاملًا وأطلقته: سير عمل الاستيعاب الآلي، والتقسيم، والتضمينات والتخزين، وإعداد النماذج المحلية، والبحث الدلالي بإجابات موثّقة المصادر، وتغليف Docker.">I designed and shipped the whole pipeline: the automated ingestion workflow, chunking, embeddings and storage, the local model setup, semantic search with cited answers, and the Docker packaging.</p></div></div>
+<div class="sc rv"><h2 class="d" data-ar="البنية والأدوات">Architecture and tools</h2><div class="tx"><p data-ar="مساران يتشاركان مخزن متجهات واحدًا. الاستيعاب يحوّل الملفات إلى متجهات قابلة للبحث. والاستعلام يجد أقرب المقاطع ويسلّمها إلى نموذج محلي.">Two paths share one vector store. Ingestion turns files into searchable vectors. Querying finds the closest passages and hands them to a local model.</p><h3 data-ar="الاستيعاب">Ingestion</h3><ul><li data-ar="سير عمل n8n يراقب Google Drive بحثًا عن مستندات.">An n8n workflow monitors Google Drive for documents.</li><li data-ar="تُقسَّم المستندات إلى مقاطع.">Documents are split into chunks.</li><li data-ar="تُولَّد التضمينات بنموذج nomic-embed-text عبر Ollama.">Embeddings are generated with nomic-embed-text through Ollama.</li><li data-ar="تُخزَّن المتجهات في Supabase pgvector.">Vectors are stored in Supabase pgvector.</li></ul><h3 data-ar="الاستعلام">Query</h3><ul><li data-ar="يُطابَق السؤال مع المتجهات المخزنة بالبحث الدلالي.">The question is matched against stored vectors by semantic search.</li><li data-ar="يكتب Llama 3.2 المستضاف محليًا عبر Ollama الإجابة.">Llama 3.2, hosted locally with Ollama, writes the answer.</li><li data-ar="تذكر الإجابة المصادر التي استخدمتها.">The answer cites the sources it used.</li></ul><ul class="tl"><li>n8n</li><li>Ollama</li><li>Supabase pgvector</li><li>Docker</li><li>Llama 3.2</li><li>nomic-embed-text</li></ul></div></div>
+<div class="sc rv"><h2 class="d" data-ar="المرئيات">Visuals</h2><div class="tx"><div class="emp" data-ar="لا توجد لقطات شاشة منشورة بعد. المخطط في أعلى الصفحة يوضح كيف ترتبط الأجزاء.">No screenshots published yet. The diagram at the top of this page shows how the pieces connect.</div></div></div>
+<div class="sc rv"><h2 class="d" data-ar="القرارات الرئيسية">Key decisions</h2><div class="tx"><ul><li data-ar="&lt;b&gt;نماذج محلية.&lt;/b&gt; Ollama يُبقي الاستدلال خاصًا ومستقلًا."><b>Local models.</b> Ollama keeps inference private and self-contained.</li><li data-ar="&lt;b&gt;مصادر في كل إجابة.&lt;/b&gt; الإجابة لا تنفع إلا إذا أمكن التحقق منها."><b>Citations in every answer.</b> Answers are only useful if you can check them.</li><li data-ar="&lt;b&gt;Docker.&lt;/b&gt; حزمة واحدة قابلة للنقل والاستضافة الذاتية."><b>Docker.</b> One portable package that can be self-hosted.</li></ul></div></div>
+<div class="sc rv"><h2 class="d" data-ar="الروابط">Links</h2><div class="tx"><p data-ar="لا يوجد عرض عام أو مستودع مرتبط بعد.">No public demo or repository is linked yet.</p></div></div>
+</div>
+<div class="wrap"><a class="nxt" href="project-brandi.html"><small data-ar="المشروع التالي">Next project</small><b data-ar="BrandI ←">BrandI &rarr;</b></a></div>
+</main>
+<footer><div class="wrap"><span data-ar="© سمية ثاني">&copy; Sumaiya Sani</span> <span id="y"></span></div></footer>
+<dialog id="lb"><img alt=""></dialog>
+<script src="site.js"></script>
+</body>
+</html>
