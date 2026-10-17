@@ -1,5 +1,5 @@
 @view-transition{navigation:auto}
-:root{--bg:#F1EFE9;--ink:#0E0E0E;--mute:#5F5C55;--ln:rgba(14,14,14,.85);--soft:#E6E2D8;--ac:#FF4D1C;--d:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--b:"Instrument Sans","Helvetica Neue",Arial,sans-serif}
+:root{--bg:#101828;--ink:#F8FAFC;--mute:#98A2B3;--ln:rgba(14,14,14,.85);--soft:#E6E2D8;--ac:#A9C9FF;--d:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--b:"Instrument Sans","Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.65 var(--b);overflow-x:hidden}
@@ -28,7 +28,7 @@ a{color:inherit}
 .ph:hover,.ph:focus-visible{background-size:100% 100%;color:#fff}
 /* hero */
 .hero{padding:72px 0 64px}
-.hero h1{font-size:clamp(60px,17vw,200px);margin:0 0 40px}
+.hero h1{font-size:clamp(40px,17vw,180px);margin:0 0 40px}
 .hero h1>span{display:block;overflow:hidden;padding-bottom:.04em}
 .hero h1 .c{display:inline-block;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
 .hero h1 .c:hover{transform:translateY(-.08em) rotate(-4deg);color:var(--ac)}
@@ -120,7 +120,7 @@ footer{padding:28px 0 40px;border-top:1px solid var(--ln);color:var(--mute);font
 .meta dt{font-size:14px;color:var(--mute)}
 .meta dd{margin:2px 0 0;font-weight:600}
 .hi{background:var(--soft);margin:16px 0 0;border-top:1px solid var(--ln)}
-.hi img{width:100%;max-height:560px;object-fit:contain;margin:0 auto;mix-blend-mode:multiply}
+.hi img{width:100%;height:auto;margin:0 auto}
 .hi.dk{background:#0b0c2a}.hi.dk img{mix-blend-mode:normal}
 .sc{display:grid;grid-template-columns:3fr 8fr;gap:32px;padding:56px 0;border-top:1px solid var(--ln)}
 .sc h2{font-size:clamp(26px,3.4vw,40px);margin:0;letter-spacing:-.03em;line-height:1}
@@ -157,3 +157,4 @@ html[lang=ar] .hero h1{font-size:clamp(56px,14vw,190px)}
 [dir=rtl] .fc:hover h3 i{transform:translate(-6px,-6px)}
 [dir=rtl] a.row:hover .tt{transform:translateX(-12px)}
 [dir=rtl] .nxt:hover b{transform:translateX(-16px)}
+.im { background: #101828; }
